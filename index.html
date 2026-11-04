@@ -155,17 +155,7 @@ svg.i{width:16px;height:16px;flex:none}
 .tour .flat figcaption{position:absolute;left:10px;bottom:10px;background:rgba(14,18,12,.72);color:#fff;border-radius:8px;padding:6px 10px;font-size:13px;font-weight:700}
 @media (max-width:640px){.tour .pn{width:260px;margin-left:-130px;margin-top:-110px}}
 
-/* who is it for */
-.who{background:var(--night);color:var(--on-night)}
-.who h2 em{color:var(--lime)}
-.who .lede{color:var(--on-night-mute)}
-.who .head{text-align:center;grid-template-columns:1fr;justify-items:center}
 .cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.who .c{display:grid;gap:14px;justify-items:center;text-align:center;padding:40px 28px;border-radius:var(--r);background:var(--night-2);border:1px solid rgba(255,255,255,.06)}
-.who .c img{height:72px;width:auto}
-.who .c h3{font-size:34px}
-.who .c p{color:var(--on-night-mute);font-size:16px;max-width:30ch}
-.who-cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 28px;margin-top:48px}
 @media (max-width:860px){.cards3{grid-template-columns:1fr}}
 
 /* stories */
@@ -520,8 +510,7 @@ body.lock{overflow:hidden}
 /* scroll reveal: applied only by script, so content is never hidden without it */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s)}
 .rv.in{opacity:1;transform:none}
-.tile,.who .c,.doc,.ccard{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
-.who .c:hover,.doc:hover{transform:translateY(-4px)}
+.tile,.doc,.ccard{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 
 body.lock{overflow:hidden}
 </style>
@@ -538,7 +527,7 @@ body.lock{overflow:hidden}
   <div class="wrap">
     <img class="logo" src="i/logo.svg" alt="Isha Health Solutions">
     <nav class="nav" aria-label="Main">
-      <a href="#programs">Therapeutic Care</a><a href="#who">Wellness</a><a href="#approach">About Us</a><a href="#tour">Virtual Tour</a>
+      <a href="#programs">Therapeutic Care</a><a href="#approach">About Us</a><a href="#tour">Virtual Tour</a>
     </nav>
   </div>
 </header>
@@ -560,20 +549,6 @@ body.lock{overflow:hidden}
 
 <div class="stats" aria-label="10,000+ lives transformed, doctor-led integrative care, 100% personalized care plans"><div class="tr" aria-hidden="true"><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i></div></div>
 
-<section id="who" class="who" data-ctx="Not sure which fits you? Help me choose">
-  <div class="wrap">
-    <div class="head">
-      <h2>Is Isha Health Solutions <em>right for you?</em></h2>
-      <p class="lede">Whether you are living with a diagnosis, recovering from treatment, or simply feel you could be well again, we meet you where you are.</p>
-    </div>
-    <div class="cards3">
-      <div class="c"><img src="i/who1.svg" alt=""><h3>Consultation</h3><p>You have a concern or a diagnosis and want a doctor's read on it, online or in person.</p></div>
-      <div class="c"><img src="i/who2.svg" alt=""><h3>Programs</h3><p>You need structured treatment or rehabilitation for a known condition, over days or weeks.</p></div>
-      <div class="c"><img src="i/who4.svg" alt=""><h3>Wellness &amp; Retreat</h3><p>You are not ill, but sleep, energy, stress or immunity have been off for a while.</p></div>
-    </div>
-    <div class="who-cta"><button class="btn light" type="button" data-help>Help Me Choose<span class="ar"><svg class="i"><use href="#ar"/></svg></span></button><a class="lnk" data-mymedic target="_blank" rel="noopener">Book a free consultation</a></div>
-  </div>
-</section>
 
 <section id="programs" data-ctx="Not sure which program fits? Help me choose">
   <div class="wrap">
