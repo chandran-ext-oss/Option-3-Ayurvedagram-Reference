@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Isha Health Solutions Homepage Option 2 — Conversion</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -513,6 +514,58 @@ body.lock{overflow:hidden}
 .tile,.doc,.ccard{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 
 body.lock{overflow:hidden}
+
+/* ---- v17 overrides ---- */
+.hm .pgb{flex:1;display:grid;gap:10px}
+.hm .pgl{font:600 13px/1 var(--f-body);color:var(--hm-sub);letter-spacing:.02em}.hm .pgl b{color:var(--ink)}
+.hm .steps{gap:6px;padding:0;background:none;border-radius:0}
+.hm .steps li{height:6px;border-radius:99px;background:var(--hm-tab);font-size:0;box-shadow:none;padding:0;overflow:hidden}
+.hm .steps li span{display:none}.hm .steps li.done::before{display:none}
+.hm .steps li.done{background:var(--ink)}.hm .steps li.cur{background:var(--olive);box-shadow:none}
+.hm .ttl{text-align:left;padding-top:20px}
+.tile .nm{bottom:16px}
+.tile .arw{position:absolute;right:14px;bottom:16px;width:20px;height:20px;color:#fff;opacity:0;transform:translate(-4px,4px);transition:opacity .25s,transform .25s}
+.tile:hover .arw,.tile:focus-visible .arw{opacity:1;transform:none}
+.care{background:var(--night);color:var(--on-night)}
+.care h2 em{color:var(--lime)}.care .lede{color:var(--on-night-mute)}
+.care .head.c{text-align:center;display:grid;gap:14px;justify-items:center;margin-bottom:44px}
+.care .cards3 .c{background:var(--night-2);border-radius:6px;padding:36px 28px;display:grid;gap:6px;justify-items:center;text-align:center}
+.care .c .ic{height:72px;display:grid;place-items:center;margin-bottom:14px}.care .c .ic img{height:72px;width:auto;max-width:100%}
+.care .c b{font:700 24px/1.1 var(--f-body)}.care .c small{font-weight:700;font-size:12px}
+.care .c p{margin:8px 0 0;color:var(--on-night-mute);max-width:26ch}
+@media (max-width:860px){.care .cards3{grid-template-columns:1fr}}
+.tour .now small{display:none}
+.tour .hud::before{content:"";position:absolute;inset:auto 0 0 0;height:340px;background:linear-gradient(0deg,rgba(0,0,0,.85),rgba(0,0,0,0));z-index:-1}
+.tour .hud{z-index:2}.tour .now{max-width:420px}.tour .now b{white-space:normal}
+.fld textarea{font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--ground);color:var(--ink);width:100%;resize:vertical}
+.fld textarea:focus{outline:none;border-color:var(--olive)}
+.care .head.c{display:block;text-align:center;margin-bottom:44px}.care .head.c .lede{margin:14px auto 0;max-width:620px}
+.hm .ttl:focus{outline:none}
+/* v18: pinned footer, aligned columns */
+.hm .box{grid-template-rows:auto minmax(0,1fr) auto}
+.hm .err{position:absolute;left:32px;right:32px;bottom:84px;padding:0;text-align:left;pointer-events:none}
+.hm .ft{padding:16px 32px 24px;border-top:1px solid var(--hm-line)}
+.hm .ft .go,.hm .ft .prev{height:48px}
+.hm .info{align-items:stretch;align-content:start}
+.hm .info .modes{padding:22px 24px;border-radius:22px;background:var(--paper);border:1px solid var(--hm-line);gap:12px}
+.hm .info .modes{align-content:start}
+.hm .info .about{height:100%;align-content:start}
+.hm .info .lb{margin:0}
+.hm .dqs{width:100%;max-width:none;margin:0}
+/* v19: Figma-style question cards */
+.hm .ttl{padding-left:0;padding-right:0}
+.hm .dqs{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.hm .dqs .lb{grid-column:1/-1;margin:0}
+.hm .dq{grid-template-columns:64px minmax(0,1fr);gap:14px 14px;align-items:center;align-content:start;padding:20px;background:var(--ground);border-radius:16px}
+.hm .dq>div{display:contents}
+.hm .dq b{grid-column:2;margin:0;font-size:16px}
+.hm .dq .opts{grid-column:1/-1;grid-template-columns:1fr;gap:8px;margin-top:4px}
+.hm .dq .opts .pill{min-height:46px;font-size:14px}
+@media (max-width:860px){.hm .dqs{grid-template-columns:1fr}}
+.hm .about{gap:34px}
+.hm .about .q{display:grid;gap:12px}
+.hm .grid3{display:flex;flex-wrap:wrap;gap:8px}
+.hm .grid3 .pill{flex:1 1 auto;white-space:nowrap}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -527,7 +580,7 @@ body.lock{overflow:hidden}
   <div class="wrap">
     <img class="logo" src="i/logo.svg" alt="Isha Health Solutions">
     <nav class="nav" aria-label="Main">
-      <a href="#programs">Therapeutic Care</a><a href="#approach">About Us</a><a href="#tour">Virtual Tour</a>
+      <a href="#approach">About Us</a><a href="#tour">Virtual Tour</a>
     </nav>
   </div>
 </header>
@@ -540,38 +593,16 @@ body.lock{overflow:hidden}
       <h1 id="h1">Rediscover balance where <em>authentic healing begins</em></h1>
       <p class="fade" style="--d:2.2s">Experience care where ancient therapeutic wisdom and modern medicine come together—crafted entirely around your condition and long-term wellbeing.</p>
       <div class="acts fade" style="--d:2.55s">
-        <button class="btn light" type="button" data-help>Begin Your Healing Journey<span class="ar"><svg class="i"><use href="#ar"/></svg></span></button>
-        <a class="lnk" data-mymedic target="_blank" rel="noopener">Book a Consultation</a>
+        <a class="btn light" href="#programs">Explore Now<span class="ar"><svg class="i"><use href="#ar"/></svg></span></a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="stats" aria-label="10,000+ lives transformed, doctor-led integrative care, 100% personalized care plans"><div class="tr" aria-hidden="true"><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i><b><span>10,000+</span> Lives Transformed</b><i></i><b><span>Doctor-Led</span> Integrative Care</b><i></i><b><span>100%</span> Personalized Care Plans</b><i></i></div></div>
+<div class="stats" aria-label="50% improved mobility, 10,000+ lives supported, 100% patient satisfaction, 30% reduced stress levels"><div class="tr" aria-hidden="true"><b><span>50%</span> Improved Mobility</b><i></i><b><span>10,000+</span> Lives Supported</b><i></i><b><span>100%</span> Patient Satisfaction</b><i></i><b><span>30%</span> Reduced Stress Levels</b><i></i><b><span>50%</span> Improved Mobility</b><i></i><b><span>10,000+</span> Lives Supported</b><i></i><b><span>100%</span> Patient Satisfaction</b><i></i><b><span>30%</span> Reduced Stress Levels</b><i></i><b><span>50%</span> Improved Mobility</b><i></i><b><span>10,000+</span> Lives Supported</b><i></i><b><span>100%</span> Patient Satisfaction</b><i></i><b><span>30%</span> Reduced Stress Levels</b><i></i><b><span>50%</span> Improved Mobility</b><i></i><b><span>10,000+</span> Lives Supported</b><i></i><b><span>100%</span> Patient Satisfaction</b><i></i><b><span>30%</span> Reduced Stress Levels</b><i></i></div></div>
 
 
-<section id="programs" data-ctx="Not sure which program fits? Help me choose">
-  <div class="wrap">
-    <div class="head">
-      <h2>What health challenge can we help you <em>restore today?</em></h2>
-      <p class="lede">Select the health condition closest to what you are experiencing to explore integrated care pathways designed specifically for your recovery.</p>
-    </div>
-    <div class="pg" id="pg"></div>
-  </div>
-</section>
 
-<section id="stories" data-ctx="">
-  <div class="wrap">
-    <div class="story">
-      <div class="tx">
-        <div style="display:grid;gap:16px"><h2>Stories of comfort, recovery, <em>and restored health</em></h2><p class="lede">Hear directly from those who have experienced our integrative approach to whole-person care.</p></div>
-        <div class="cap" id="cap"></div>
-        <div class="thumbs" id="th"></div>
-      </div>
-      <div class="vid"><img id="big" src="i/story.jpg" alt=""><button class="play" type="button" aria-label="Play story"><svg class="i" style="width:26px;height:26px"><use href="#pl"/></svg></button></div>
-    </div>
-  </div>
-</section>
 
 <section id="approach" class="phil" data-ctx="">
   <div class="wrap">
@@ -591,7 +622,6 @@ body.lock{overflow:hidden}
     <div class="head" style="margin-bottom:0">
       <h2>Step into a serene sanctuary <em>dedicated to your recovery</em></h2>
       <p class="lede">Nestled in peaceful surroundings, our quiet therapy suites, clinical rooms, and open yoga halls offer a tranquil retreat for deep physical renewal.</p>
-      <div style="margin-top:28px"><a class="btn light" href="#track">Explore Our Healing Spaces<span class="ar"><svg class="i"><use href="#ar"/></svg></span></a></div>
     </div>
   </div>
   <div class="track" id="track">
@@ -610,6 +640,40 @@ body.lock{overflow:hidden}
 
 
 
+<section id="care" class="care" data-ctx="Not sure which fits? Help me choose">
+  <div class="wrap">
+    <div class="head c"><h2>Explore how we can <em>support your health</em></h2><p class="lede">Discover the care options available to address health concerns and support your wellbeing.</p></div>
+    <div class="cards3">
+      <div class="c"><span class="ic"><img src="i/who1.svg" alt=""></span><b>30-40 Mins</b><small>(Discovery Call)</small><p>You have a health concern and need guidance from a doctor.</p></div>
+      <div class="c"><span class="ic"><img src="i/who2.svg" alt=""></span><b>3-5 Days</b><small>(Recovery Program)</small><p>You need structured treatment or rehabilitation for a health condition.</p></div>
+      <div class="c"><span class="ic"><img src="i/who4.svg" alt=""></span><b>10/21 Days</b><small>(Rejuvenation)</small><p>You want to improve your sleep, energy, stress levels and overall wellbeing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="stories" data-ctx="">
+  <div class="wrap">
+    <div class="story">
+      <div class="tx">
+        <div style="display:grid;gap:16px"><h2>Stories of comfort, recovery, <em>and restored health</em></h2><p class="lede">Hear directly from those who have experienced our integrative approach to whole-person care.</p></div>
+        <div class="cap" id="cap"></div>
+        <div class="thumbs" id="th"></div>
+      </div>
+      <div class="vid"><img id="big" src="i/story.jpg" alt=""><button class="play" type="button" aria-label="Play story"><svg class="i" style="width:26px;height:26px"><use href="#pl"/></svg></button></div>
+    </div>
+  </div>
+</section>
+
+<section id="programs" data-ctx="Not sure which program fits? Help me choose">
+  <div class="wrap">
+    <div class="head">
+      <h2>What health challenge can we help you <em>restore today?</em></h2>
+      <p class="lede">Select the health condition closest to what you are experiencing to explore integrated care pathways designed specifically for your recovery.</p>
+    </div>
+    <div class="pg" id="pg"></div>
+  </div>
+</section>
+
 <section class="ns" id="choose" data-ctx="">
   <div class="wrap">
     <div class="copy">
@@ -623,6 +687,7 @@ body.lock{overflow:hidden}
     </div>
   </div>
 </section>
+
 
 <section id="sciences" class="sci" data-ctx="One doctor, four sciences, one plan">
   <div class="wrap">
@@ -642,9 +707,9 @@ body.lock{overflow:hidden}
       <p class="lede">Physicians, Ayurvedic and Siddha vaidyas, therapists and yoga teachers who work on the same case together, not in sequence.</p>
     </div>
     <div class="docs">
-      <article class="doc"><div class="ph"><img src="i/d1.jpg" alt="Dr. Ananya Rao"></div><span class="role">Allopathy Physician</span><h3>Dr. Ananya Rao</h3><p class="sp">Specialisations, qualification and years of experience to be added</p></article>
-      <article class="doc"><div class="ph"><img src="i/d2.jpg" alt="Vaidya Rajesh Kumar"></div><span class="role">Ayurveda Vaidya</span><h3>Vaidya Rajesh Kumar</h3><p class="sp">Specialisations, qualification and years of experience to be added</p></article>
-      <article class="doc"><div class="ph"><img src="i/d3.jpg" alt="Dr. Siddharth Siddh"></div><span class="role">Siddha Expert</span><h3>Dr. Siddharth Siddh</h3><p class="sp">Specialisations, qualification and years of experience to be added</p></article>
+      <article class="doc"><div class="ph"><img src="i/d1.jpg" alt="Dr. Ananya Rao"></div><span class="role">Allopathy Physician</span><h3>Dr. Ananya Rao</h3><p class="sp">MBBS, MD - Integrative Medicine, 15+ years experience</p></article>
+      <article class="doc"><div class="ph"><img src="i/d2.jpg" alt="Vaidya Rajesh Kumar"></div><span class="role">Ayurveda Vaidya</span><h3>Vaidya Rajesh Kumar</h3><p class="sp">BAMS, MD (Ayurveda), Panchakarma Specialist, 18+ years experience</p></article>
+      <article class="doc"><div class="ph"><img src="i/d3.jpg" alt="Dr. Siddharth Siddh"></div><span class="role">Siddha Expert</span><h3>Dr. Siddharth Siddh</h3><p class="sp">BSMS, Traditional Pulse Diagnosis &amp; Pharmacology, 14+ years experience</p></article>
     </div>
   </div>
 </section>
@@ -663,15 +728,6 @@ body.lock{overflow:hidden}
   <div class="wrap flatj" id="jflat"></div>
 </section>
 
-<section id="faq" class="faq" style="padding-top:0" data-ctx="Still have questions? Book a free call">
-  <div class="wrap">
-    <div class="copy">
-      <h2>Everything you <em>need to know</em></h2>
-      <p class="lede">The questions people ask before their first consultation.</p>
-    </div>
-    <div id="qa"></div>
-  </div>
-</section>
 
 <section id="connect" class="cn">
   <div class="fl" id="fl" aria-hidden="true">
@@ -684,19 +740,29 @@ body.lock{overflow:hidden}
     <div class="box">
       <h2>Ready to take the first step toward <em>lasting vitality?</em></h2>
       <p class="lede">Speak directly with our health advisors to discuss your health needs, explore treatment programs, or check consultation availability.</p>
-      <div><a class="btn light" data-mymedic target="_blank" rel="noopener" style="background:var(--ink);color:var(--ground)">Talk to a Health Advisor<span class="ar"><svg class="i"><use href="#ext"/></svg></span></a></div>
       <form id="f" novalidate>
         <div class="fld"><label for="nm">Name</label><input id="nm" name="nm" autocomplete="name"></div>
         <div class="fld"><label for="em">Email</label><input id="em" name="em" type="email" autocomplete="email"></div>
         <div class="fld"><label for="ph">WhatsApp</label><input id="ph" name="ph" type="tel" autocomplete="tel" placeholder="+91"></div>
-        <div class="fld"><label for="cn">Your concern (optional)</label><select id="cn" name="cn"><option value="">Select your concern</option></select></div>
-        <label class="cons"><input id="ag" type="checkbox"> I accept the terms</label>
-        <button class="btn light" type="submit" style="border:1px solid currentColor">Request a Call Back<span class="ar"><svg class="i"><use href="#ar"/></svg></span></button>
+        <div class="fld"><label for="cn">What health challenge or question can we help you address?</label><textarea id="cn" name="cn" rows="4"></textarea></div>
+        <label class="cons"><input id="ag" type="checkbox"> I accept the terms and conditions</label>
+        <button class="btn light" type="submit" style="background:var(--ink);color:var(--ground)">Submit<span class="ar"><svg class="i"><use href="#ar"/></svg></span></button>
         <p class="ok" id="ok" role="status"></p>
       </form>
     </div>
   </div>
 </section>
+
+<section id="faq" class="faq" data-ctx="Still have questions? Book a free call">
+  <div class="wrap">
+    <div class="copy">
+      <h2>Everything you <em>need to know</em></h2>
+      <p class="lede">The questions people ask before their first consultation.</p>
+    </div>
+    <div id="qa"></div>
+  </div>
+</section>
+
 </main>
 
 <footer><div class="wrap"><span>Isha Health Solutions · Homepage Option 2</span><span>Design preview. The enquiry form does not send anything.</span></div></footer>
@@ -712,7 +778,7 @@ body.lock{overflow:hidden}
 <div class="hm" id="hm" hidden>
   <div class="box" role="dialog" aria-modal="true" aria-labelledby="hmT">
     <div class="hd">
-      <div class="hrow"><ol class="steps" id="hmSteps"></ol><button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+      <div class="hrow"><div class="pgb"><span class="pgl" id="hmLab"></span><ol class="steps" id="hmSteps"></ol></div><button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
       <h2 class="ttl" id="hmT" tabindex="-1"></h2>
     </div>
     <div class="ct" id="hmBody"></div>
@@ -745,8 +811,7 @@ function esc(s){return s.replace(/[<>&"]/g,function(c){return{'<':'&lt;','>':'&g
 
 /* programs: all ten, each opens its own page */
 var A='<svg class="i"><use href="#ext"/></svg>';
-$('pg').innerHTML=CAT.map(function(c,i){return '<a class="tile" href="'+window.PURL(i)+'" target="_blank" rel="noopener"><img src="i/'+c[1]+'.jpg" alt="" loading="lazy"><span class="nm">'+esc(c[0])+'</span><span class="go">Explore Healing Protocols &rarr;</span></a>'}).join('');
-$('cn').innerHTML+=CAT.map(function(c){return '<option>'+esc(c[0])+'</option>'}).join('')+'<option>Something else</option>';
+$('pg').innerHTML=CAT.map(function(c,i){return '<a class="tile" href="'+window.PURL(i)+'" target="_blank" rel="noopener"><img src="i/'+c[1]+'.jpg" alt="" loading="lazy"><span class="nm">'+esc(c[0])+'</span><svg class="arw" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>'}).join('');
 
 /* virtual tour stops: clinical and program spaces only */
 var TOUR=[['t-campus','Arrival','The centre at dusk. Reception and registration are just inside.'],
@@ -810,7 +875,7 @@ $('colA').innerHTML=col(NA);$('colB').innerHTML=col(NB);
   ['st3.png','Step 3','Treat','Undergo targeted care and therapeutic programs for targeted recovery.',[]],
   ['st4.png','Step 4','Thrive','Sustain health gains with ongoing follow-ups and long-term care plans.',[]]];
  var jw=$('jw'),jr=$('jr'),st=$('jst'),ln=$('jline'),fill=$('jfill'),cur=-1;
- st.innerHTML=J.map(function(s,i){return '<div class="sl" data-i="'+i+'"><div class="il"><img src="i/'+s[0]+'" alt=""></div><div class="tx"><span class="k">'+s[1]+'</span><h3>'+esc(s[2])+'</h3><p>'+esc(s[3])+'</p>'+(s[4].length?'<ul>'+s[4].map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul>':'')+'</div></div>'}).join('');
+ st.innerHTML=J.map(function(s,i){return '<div class="sl" data-i="'+i+'"><div class="il"><img src="i/'+s[0]+'" alt=""></div><div class="tx"><h3>'+esc(s[2])+'</h3><p>'+esc(s[3])+'</p>'+(s[4].length?'<ul>'+s[4].map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul>':'')+'</div></div>'}).join('');
  ln.innerHTML=J.map(function(s,i){return '<button type="button" class="jn" data-i="'+i+'" aria-label="Step '+(i+1)+': '+esc(s[2])+'">'+(i+1)+'</button>'}).join('');
  $('jflat').innerHTML=J.map(function(s){return '<div><img src="i/'+s[0]+'" alt=""><b>'+esc(s[2])+'</b><p class="lede" style="font-size:15px">'+esc(s[3])+'</p></div>'}).join('');
  var sls=st.children,jns=ln.children;
@@ -825,6 +890,10 @@ $('colA').innerHTML=col(NA);$('colB').innerHTML=col(NB);
 })();
 
 /* four sciences */
+
+
+/* FAQ (answers from the Figma FAQ used in Option 2b) */
+/* four sciences */
 var SY=[['Ayurveda','s-ayur','Personalised therapies, herbal formulations, Panchakarma and lifestyle guidance that restore balance and address the root causes of disease.'],
  ['Siddha','s-siddha','A traditional system of medicine that approaches health through its own principles of diagnosis and care.'],
  ['Allopathy','s-allo','Modern diagnosis and treatment, working alongside the other systems so that your care stays coordinated.'],
@@ -832,7 +901,6 @@ var SY=[['Ayurveda','s-ayur','Personalised therapies, herbal formulations, Panch
 $('lst').innerHTML=SY.map(function(s,i){return '<li data-on="'+(i==0)+'"><button type="button" aria-expanded="'+(i==0)+'" data-i="'+i+'"><span class="n">('+String(i+1).padStart(2,'0')+')</span><span class="t">'+esc(s[0])+'</span><span class="pl">+</span></button><p class="d">'+s[2]+'</p></li>'}).join('');
 $('lst').onclick=function(e){var b=e.target.closest('button');if(!b)return;var i=+b.dataset.i;[].forEach.call($('lst').children,function(li,k){li.dataset.on=String(k==i);li.firstChild.setAttribute('aria-expanded',String(k==i))});$('sciImg').src='i/'+SY[i][1]+'.jpg';$('sciWm').textContent=SY[i][0]};
 
-/* FAQ (answers from the Figma FAQ used in Option 2b) */
 var Q=[['My condition is not listed. Can you still help?','Very possibly. Ayurveda treats the person, not only the condition. Book a free consultation and a doctor will tell you honestly whether we are the right place.'],
  ['Which should I choose: a consultation, a therapy or a program?',"You don't have to choose. Start with a free consultation; your doctor recommends what your condition needs."],
  ['I am on allopathic medication. Can I still come?','Yes. Our doctors review your case and integrate treatment safely. Any change to your medication is made gradually and only under medical guidance.'],
@@ -897,18 +965,15 @@ var PATHREG=['head','neck','shoulders','shoulders','chest','abdomen','legs','leg
 var REGPATH={head:[0],eyes:[0],neck:[1],shoulders:[2,3],hands:[2,3],chest:[4],abdomen:[5,8],legs:[6,7],feet:[6,7],joints:[2,3,6,7],skin:[],body:[]};
 var DQ=[['Body frame, generally',['Thin, hard to gain weight','Medium, muscular build','Gains weight easily.']],
  ['Weather that bothers you most',['Cold, dry, windy weather','Hot weather','Cold, damp weather']],
- ['Your appetite over the years',['Hungry sometimes, not always.','Irritable if meals are late.','Steady, but easy to miss a meal.']],
- ['Your skin, usually',['Dry and rough','Warm, sensitive, flushes easily','Smooth, oily and cool']],
- ['How you sleep',['Light, wake easily','Sound but short','Deep and long, slow to wake']],
- ['Lately, you feel more',['Restless, anxious, scattered','Irritable, heated, inflamed','Heavy, sluggish, low']]];
+ ['Your appetite over the years',['Hungry sometimes, not always.','Irritable if meals are late.','Steady, but easy to miss a meal.']]];
 var DK=['V','P','K'],DN={V:'Vata',P:'Pitta',K:'Kapha'};
 var DCOL={V:'var(--lime)',P:'var(--forest)',K:'var(--olive)'},DTXT={V:'var(--lime-ink)',P:'var(--on-forest)',K:'#fff'};
 var DPROG={V:[3,0],P:[7,4],K:[4,5]};
 var PATHS={both:{n:'Symptoms + body type',s:'Most accurate',d:'Where it hurts, plus your constitution. About 3 minutes.',steps:['info','dosha','sym','res']},
  sym:{n:'Symptoms only',s:'Quickest',d:'Tap where it hurts or type what you feel. About 1 minute.',steps:['info','sym','res']},
- dosha:{n:'Body type only',s:'No symptoms needed',d:'Six questions on your Prakriti. About 2 minutes.',steps:['info','dosha','res']}};
+ dosha:{n:'Body type only',s:'No symptoms needed',d:'Three questions on your Prakriti. About 1 minute.',steps:['info','dosha','res']}};
 var TABN={info:'Info',dosha:'More about you',sym:'Symptoms',res:'Treatment'};
-var S;function reset(){S={path:'both',i:0,age:'',gen:'',dq:[null,null,null,null,null,null],sel:[],rg:null,q:'',open:null,more:false,pick:null,dp:0}}reset();
+var S;function reset(){S={path:'both',i:0,age:'',gen:'',dq:[null,null,null],sel:[],rg:null,q:'',open:null,more:false,pick:null,dp:0}}reset();
 var hm=$('hm'),ct=$('hmBody'),last=null;
 function steps(){return PATHS[S.path].steps}
 function cur(){return steps()[S.i]}
@@ -920,9 +985,9 @@ hm.addEventListener('click',function(e){if(e.target===hm)close()});
 var TK='<span class="tk"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
 function seg(key,val,label,sub){return '<button type="button" class="pill" data-k="'+key+'" data-v="'+esc(val)+'" aria-pressed="'+(S[key]===val)+'">'+TK+esc(label)+(sub?'<small>'+esc(sub)+'</small>':'')+'</button>'}
 function chrome(){var st=steps(),k=S.i;
- $('hmSteps').innerHTML=st.map(function(s,i){return '<li class="'+(i<k?'done':i===k?'cur':'')+'"'+(i===k?' aria-current="step"':'')+'><span>'+TABN[s]+'</span><i></i></li>'}).join('');
- var res=cur()==='res';$('hmPrev').disabled=S.i===0&&!(cur()==='dosha'&&S.dp);$('hmNext').hidden=res;$('hmBook').hidden=!res;$('hmBook').href=window.MYMEDIC||'#';
- $('hmMeta').textContent='Step '+(k+1)+' of '+st.length}
+ $('hmSteps').innerHTML=st.map(function(s,i){return '<li class="'+(i<k?'done':i===k?'cur':'')+'"'+(i===k?' aria-current="step"':'')+'><span>'+TABN[s]+'</span><i></i></li>'}).join('');$('hmLab').innerHTML='<b>Step '+(k+1)+' of '+st.length+'</b> · '+TABN[st[k]];
+ var res=cur()==='res';$('hmPrev').disabled=S.i===0;$('hmNext').hidden=res;$('hmBook').hidden=!res;$('hmBook').href=window.MYMEDIC||'#';
+ $('hmMeta').textContent=''}
 function render(keep){
  var sy=ct.scrollTop;$('hmErr').textContent='';var k=cur(),h='',T='';
  if(k==='info'){T='Let’s find the right <em>place to start</em>';
@@ -931,7 +996,7 @@ function render(keep){
   '<div class="q"><span class="lb">Gender</span><div class="grid3">'+seg('gen','Female','Female')+seg('gen','Male','Male')+seg('gen','Prefer not to say','Prefer not to say')+'</div></div>'+
   '<p class="note">This tool does not provide medical advice. <button type="button" data-more>'+(S.more?'Hide':'See additional information')+'</button>'+(S.more?'<br>It suggests where to start from what you tell us. If something is severe or sudden, seek emergency care.':'')+'</p></div></div>'}
  else if(k==='dosha'){T='Tell us a little <em>about yourself</em>';
-  h='<div class="dqs"><span class="lb">Questions '+(S.dp*3+1)+'–'+(S.dp*3+3)+' of 6</span>'+DQ.slice(S.dp*3,S.dp*3+3).map(function(q,ii){var i=ii+S.dp*3;return '<div class="dq"><img class="av" src="i/hm/avatar.png" alt=""><div><b>'+esc(q[0])+'</b><div class="opts">'+q[1].map(function(o,j){var on=S.dq[i]===j;return '<button type="button" class="pill" data-dq="'+i+'" data-j="'+j+'" aria-pressed="'+on+'">'+TK+esc(o)+'</button>'}).join('')+'</div></div></div>'}).join('')+'</div>'}
+  h='<div class="dqs">'+DQ.map(function(q,i){return '<div class="dq"><img class="av" src="i/hm/avatar.png" alt=""><div><b>'+esc(q[0])+'</b><div class="opts">'+q[1].map(function(o,j){var on=S.dq[i]===j;return '<button type="button" class="pill" data-dq="'+i+'" data-j="'+j+'" aria-pressed="'+on+'">'+TK+esc(o)+'</button>'}).join('')+'</div></div></div>'}).join('')+'</div>'}
  else if(k==='sym'){T='Where do you <em>feel it?</em>';
   var has={};S.sel.forEach(function(s){if(SYM[s])has[SYM[s].r]=1});
   var on={};(S.rg?REGPATH[S.rg]:[]).forEach(function(i){on[i]=1});var hp={};Object.keys(has).forEach(function(r){REGPATH[r].forEach(function(i){hp[i]=1})});
@@ -951,7 +1016,7 @@ function symPaint(){var has={};S.sel.forEach(function(s){if(SYM[s])has[SYM[s].r]
 function symChip(s){return '<button type="button" class="pill" data-sym="'+esc(s)+'" aria-pressed="'+(S.sel.indexOf(s)>-1)+'">'+TK+esc(s)+'</button>'}
 function compute(){
  var hasD=steps().indexOf('dosha')>-1,hasS=steps().indexOf('sym')>-1,pk={V:1,P:1,K:1},vk=null;
- if(hasD){for(var i=0;i<5;i++)if(S.dq[i]!=null)pk[DK[S.dq[i]]]+=3;vk={V:pk.V,P:pk.P,K:pk.K};if(S.dq[5]!=null)vk[DK[S.dq[5]]]+=5;if(hasS)S.sel.forEach(function(s){if(SYM[s])vk[SYM[s].d]+=1.5})}
+ if(hasD){for(var i=0;i<3;i++)if(S.dq[i]!=null)pk[DK[S.dq[i]]]+=3;vk={V:pk.V,P:pk.P,K:pk.K};if(hasS)S.sel.forEach(function(s){if(SYM[s])vk[SYM[s].d]+=1.5})}
  function pct(o){var t=o.V+o.P+o.K,r={V:Math.round(o.V/t*100),P:Math.round(o.P/t*100)};r.K=100-r.V-r.P;return r}
  var sc={},cnt={},cond={},why={},flag=false;
  if(hasS)S.sel.forEach(function(s){var x=SYM[s];if(!x)return;if(x.f)flag=true;x.p.forEach(function(p,j){sc[p]=(sc[p]||0)+(j?.8:1);cnt[p]=(cnt[p]||0)+1});x.c.forEach(function(c){cond[c]=(cond[c]||0)+1;(why[c]=why[c]||[]).push(s)})});
@@ -977,22 +1042,20 @@ function results(){
  if(r.hasD){
   h+='<div class="two"><div class="pan"><h6>Your natural constitution</h6><div class="sub">Prakriti, the blend you were born with</div><div class="dwrap">'+chart(r.pk)+dbars(r.pk)+'</div></div>'+
    '<div class="pan"><h6>Current imbalance</h6><div class="sub">Vikriti, where you are today</div>'+dbars(r.vk)+'</div></div>';
-  if(r.hasS&&r.conds.length)h+='<p class="rh">Possible conditions</p><div class="crow">'+condCards(r)+'</div>';
   h+='<p class="rh">Recommended for you</p><div class="recs">'+recs+'</div>';
  } else {
-  h+='<div class="split"><div class="colA"><p class="rh">Possible conditions</p>'+(r.conds.length?condCards(r):'<p class="note">A doctor will review what you typed.</p>')+
+  h+='<div class="split"><div class="colA"><p class="rh">Your details</p>'+
    '<div class="pp"><div class="r"><span>Gender <b>'+esc(S.gen)+'</b> · Age <b>'+esc(S.age)+'</b></span><button type="button" data-go="info">Edit</button></div><div class="r"><span>My symptoms: <b>'+S.sel.map(esc).join(', ')+'</b></span><button type="button" data-go="sym">Edit</button></div><button type="button" class="so" data-restart><img src="i/hm/refresh.svg" alt="">Start over</button></div></div>'+
    '<div class="colA"><p class="rh">Recommended for you</p><div class="recs col">'+recs+'</div></div></div>';
  }
  return h+'</div>';
 }
 function next(){var k=cur(),err='';
- if(k==='dosha'&&S.dp===0){if(S.dq.slice(0,3).indexOf(null)>-1){$('hmErr').textContent='Answer all three to continue.';return}S.dp=1;render();return}
  if(k==='info'&&(!S.age||!S.gen))err='Choose an age group and a gender to continue.';
  if(k==='dosha'&&S.dq.indexOf(null)>-1)err='Answer all three to continue.';
  if(k==='sym'&&!S.sel.length)err='Choose at least one symptom, or type one and press Enter.';
- if(err){$('hmErr').textContent=err;return}S.i++;if(cur()==='dosha')S.dp=0;render()}
-$('hmNext').onclick=next;$('hmPrev').onclick=function(){if(cur()==='dosha'&&S.dp===1){S.dp=0;render();return}if(S.i>0){S.i--;if(cur()==='dosha')S.dp=1;render()}};
+ if(err){$('hmErr').textContent=err;return}S.i++;render()}
+$('hmNext').onclick=next;$('hmPrev').onclick=function(){if(S.i>0){S.i--;render()}};
 ct.addEventListener('click',function(e){var t;
  if(e.target.closest('.vp'))return;
  if(t=e.target.closest('[data-path]')){S.path=t.dataset.path;[].forEach.call(ct.querySelectorAll('[data-path]'),function(b){b.setAttribute('aria-pressed',String(b===t))});chrome();return}
